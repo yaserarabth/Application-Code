@@ -502,7 +502,7 @@ pipeline {
         PATH = "/opt/sonar-scanner/bin:${PATH}"
         ECR_REPO = '951532862358.dkr.ecr.us-east-1.amazonaws.com/myecrrepo'
         AWS_REGION = 'us-east-1'
-        DEPLOYMENT_REPO = 'https://github.com/yaserarabth/Application-Code.git'
+        DEPLOYMENT_REPO = 'https://github.com/yaserarabth/deployment-repo.git'
     }
 
     stages {
@@ -576,7 +576,7 @@ pipeline {
                 )]) {
                     sh '''
                         rm -rf gitops-repo
-                        git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.com/Reshufowzi/deployment-repo.git gitops-repo
+                        git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.com/yaserarabth/deployment-repo.git gitops-repo
 
                         cd gitops-repo/k8s || exit 1
 
@@ -599,6 +599,8 @@ pipeline {
             }
         }
 
+    }
+}
     }
 }
 
