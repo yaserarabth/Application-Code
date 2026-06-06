@@ -118,6 +118,8 @@ sudo apt-get update
 
 # Install Trivy
 sudo apt-get install -y trivy
+sudo mkdir -p /var/lib/jenkins/.cache/trivy/db
+sudo chown -R jenkins:jenkins /var/lib/jenkins/.cache/trivy
 ```
 
 ---
