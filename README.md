@@ -421,7 +421,7 @@ pipeline {
         IMAGE_NAME = 'mydockerimage'
         SONARQUBE_SERVER = 'SonarQubeServer'
         PATH = "/opt/sonar-scanner/bin:${PATH}"
-        ECR_REPO = '128913199644.dkr.ecr.us-east-1.amazonaws.com/myecrrepo'
+        ECR_REPO = '951532862358.dkr.ecr.us-east-1.amazonaws.com/myecrrepo'
         AWS_REGION = 'us-east-1'
     }
 
@@ -431,7 +431,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'git-cred',
-                    url: 'https://github.com/Reshufowzi/application-code.git'
+                    url: 'https://github.com/yaserarabth/Application-Code.git url: '', credentialsId: '', branch '''
             }
         }
 
