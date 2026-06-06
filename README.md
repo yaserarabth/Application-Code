@@ -317,7 +317,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'git-cred',
-                    url: 'https://github.com/yaserarabth/Application-Code.git'
+                    url: 'https://github.com/Reshufowzi/application-code.git'
             }
         }
 
@@ -336,12 +336,12 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-        steps {
-        withSonarQubeEnv("${SONARQUBE_SERVER}") {
-            sh 'sonar-scanner -X'
+            steps {
+                withSonarQubeEnv("${SONARQUBE_SERVER}") {
+                    sh 'sonar-scanner'
+                }
+            }
         }
-    }
-}
 
     }
 }
