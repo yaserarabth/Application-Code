@@ -431,7 +431,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'git-cred',
-                    url: 'https://github.com/yaserarabth/Application-Code.git url: '', credentialsId: '', branch '''
+                    url: 'https://github.com/yaserarabth/Application-Code.git'
             }
         }
 
