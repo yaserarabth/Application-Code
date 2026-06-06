@@ -278,7 +278,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'git-cred',
-                    url: 'https://github.com/Reshufowzi/application-code.git'
+                    url: 'https://github.com/yaserarabth/Application-Code.git'
             }
         }
 
